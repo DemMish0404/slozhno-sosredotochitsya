@@ -1,0 +1,985 @@
+//! заменить название папки css на 'styles'
+
+
+
+
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+@import url('./dark.css');
+@import url('./light.css');
+@import url('../fonts/fonts.css');
+@import url("./variables.css");
+@import url("./globals.css");
+
+[class*="__container"]{
+
+	max-width: 1024px;
+	margin: 0px auto;
+  padding: 0px 20px;
+  
+}
+@media (width <= 375px) {
+   [class*="__container"]{
+
+      max-width: 1024px;
+      margin: 0px auto;
+     padding: 0px 10px;
+     
+   }
+}
+
+//*повторяющиеся элементы
+.section-title {
+   font-weight: bold;
+
+   max-inline-size: 30.8%;
+   &:not(:last-child){
+      margin-bottom: 1.25rem;
+   }
+
+
+}
+@media (width <= 607px) {
+   .section-title {
+      
+   
+      max-inline-size: none;
+      
+   
+   
+   }
+}
+.title-second-version{
+   font-weight: bold;
+   background-color: var(--accent-color);
+   color: var(--text-color);
+   &:not(:last-child){
+      margin-bottom: 1.25rem;
+   }
+}
+.card {
+
+   &__title {
+      
+      color: var(--text-color);
+      &:not(:last-child){
+         margin-bottom: 10px;
+      }
+   }
+
+   &__text-content {
+      color: var(--text-color);
+   }
+
+   &__paragraph {
+   }
+   .card__link{
+      text-shadow: 2px 2px var(--accent-color);
+   }
+   &__link {
+      position: relative;
+      display: inline-block;
+      transition:  var(--transition-effect);
+
+      &::before{
+         position: absolute;
+         content: '';
+         width: 100%;
+         height: 1.5px;
+         inset-block-end: 0;
+         inset-inline-end: 0;
+      }
+      &:hover::before{
+         
+            background-color: var(--text-color);
+         
+         
+      }
+      &:focus{
+         outline: 1px solid var(--text-color);
+        
+      }
+   }
+}
+.title-third-version {
+   font-weight: bold;
+   color: var(--h1-color);
+   text-shadow: var(--h1-offset) var(--h1-offset) var(--h1-accent);
+}
+//*повторяющиеся элементы END
+
+
+
+//* модификаторы 
+.regular-weight{
+   font-weight: normal;
+}
+
+.ibg-parent{
+   position: relative;
+}
+.ibg{
+   position: absolute;
+   inset: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+}
+//* модификаторы  END
+
+
+.page {
+   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+   
+ }
+ 
+// отступы между секциями
+ .main{
+   .why-is-it-so-hard,.what-reduces-attention,.how-to-concentrate,.in-pictures{
+      &:not(:last-child){
+         margin-bottom: 79px;
+      }
+   }
+   
+   .introduction{
+      &:not(:last-child){
+         margin-bottom: 60px;
+      }
+   }
+   
+ }
+
+ @media (width <= 607px) {
+   .main{
+      .why-is-it-so-hard,.what-reduces-attention,.how-to-concentrate,.in-pictures{
+         &:not(:last-child){
+            margin-bottom: 48px;
+         }
+      }
+
+      .introduction{
+         &:not(:last-child){
+            margin-bottom: 30px;
+         }
+      }
+      
+    }
+ }
+
+//? header 
+.header {
+   
+   position: absolute;
+   z-index: 50;
+   inset-inline-start: 0;
+   inset-block-start: 17px;
+   width: 100%;
+   height: auto;
+
+   padding-right: 20px;
+   padding-left: 20px;
+
+
+   &__theme-menu {
+   }
+
+   &__theme-menu-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+   }
+
+   &__theme-menu-item {
+   }
+
+   &__theme-menu-button {
+      
+      
+      padding: 1.5px 13px;
+      color: var(--text-color);
+      text-transform: lowercase;
+      background-color: transparent;
+      
+      transition: var(--transition-effect);
+
+
+      &:hover{
+         opacity:  0.4;
+         border: 1px solid var(--text-color);
+      }
+      &:focus{
+         outline: none;
+         border-bottom: 1px solid var(--text-color);
+      }
+      
+      &_type {
+      }
+
+      &_active {
+         border: 1px solid var(--text-color);
+      }
+
+      &_type {
+      }
+
+      &_type {
+      }
+   }
+}
+
+@media (width <=768px) {
+   .header {
+   
+      position: absolute;
+      inset-inline-start: 0;
+      inset-block-start: clamp(4.6875rem, -2.2901rem + 29.771vw, 12rem);
+      width: 100%;
+      height: auto;
+   
+   
+      &__theme-menu {
+      }
+   
+      &__theme-menu-list {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: end;
+         gap: 7px;
+      }
+   
+      &__theme-menu-item {
+      }
+   
+      &__theme-menu-button {
+         
+         
+         
+   
+   
+         &:hover{
+            
+         }
+         &:focus{
+            
+         }
+         
+         &_type {
+         }
+   
+         &_active {
+            
+         }
+   
+         &_type {
+         }
+   
+         &_type {
+         }
+      }
+   }
+}
+
+
+@media (width < 768px) {
+   .header{
+      padding-right: 10px;
+      padding-left: 10px;
+   }
+}
+//? header END
+
+
+
+
+
+//? introduction section
+.introduction {
+   
+   background-image: var(--background-image-introduction);
+   background-position: bottom;
+   background-repeat: no-repeat;
+   background-size: cover;
+   &__container {
+      position: relative;
+      &::before,&::after{
+      
+         content: '';
+         position: absolute;
+         
+   
+         background: var(--text-color);
+         transform: translate(-20px, 0px);
+      }
+   
+      &::before{
+         width: 25px;
+         height: 1px;
+         inset-block-start: 20px;
+         inset-inline-end: 0;
+         
+      }
+      &::after{
+         width: 1px;
+         height: 25px;
+         inset-block-start: 20px;
+         inset-inline-end: 0;
+         
+      }
+   }
+   &__box-for-decor{
+      position: relative;
+      &::before,&::after{
+      
+         content: '';
+         position: absolute;
+         
+   
+         background: var(--text-color);
+         
+      }
+   
+      &::before{
+         width: 25px;
+         height: 1px;
+         inset-block-end:20px ;
+         inset-inline-start: 0px;
+      }
+      &::after{
+         width: 1px;
+         height: 25px;
+         inset-block-end:20px ;
+         inset-inline-start: 0px;
+      }
+   }
+   &__decor-block {
+      position: absolute;
+      inset-inline-end: 9px;
+      inset-block-start: 20px;
+
+      display: flex;
+      align-items: center;
+      // justify-content: end;
+      gap: 9px;
+
+      text-transform: uppercase;
+      color: var(--text-color);
+      line-height: calc(25/18);
+      span{
+         display: inline-block;
+         width: 9px;
+         height: 9px;
+         border-radius: 50%;
+         overflow: hidden;
+
+         background-color: var(--text-color);
+
+         box-shadow: 0px 0px 4px 2px var(--text-color);
+
+      }
+   }
+
+   &__content {
+      padding-top: 27.6vw;
+      padding-bottom: 13.09vw;
+   }
+
+   &__title {
+      position: relative;
+      inset-inline-start: -19.8px;
+      font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+
+      &:not(:last-child){
+         margin-bottom: 4.77rem;
+      }
+   }
+   &__text{
+
+      margin-left: auto;
+      max-width: clamp(22.75rem, -1.0625rem + 49.6094vw, 30.6875rem);
+      font-weight: bold;
+      color: var(--text-color);
+
+      background-color: var(--accent-color);
+   }
+   &__paragrapgh {
+      
+   }
+}
+
+@media (width <= 768px){
+   
+
+   .introduction {
+   
+      background-image: var(--background-image-introduction);
+      background-position: bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+      &__container {
+         position: relative;
+         &::before,&::after{
+         
+            content: '';
+            position: absolute;
+            
+      
+            background: var(--text-color);
+            transform: translate(-20px, 0px);
+         }
+      
+         &::before{
+            width: 25px;
+            height: 1px;
+            inset-block-start: 20px;
+            inset-inline-end: 0;
+            
+         }
+         &::after{
+            width: 1px;
+            height: 25px;
+            inset-block-start: 20px;
+            inset-inline-end: 0;
+            
+         }
+      }
+      &__box-for-decor{
+         position: relative;
+         &::before,&::after{
+         
+            content: '';
+            position: absolute;
+            
+      
+            background: var(--text-color);
+            
+         }
+      
+         &::before{
+            width: 25px;
+            height: 1px;
+            inset-block-end:20px ;
+            inset-inline-start: 0px;
+         }
+         &::after{
+            width: 1px;
+            height: 25px;
+            inset-block-end:20px ;
+            inset-inline-start: 0px;
+         }
+      }
+      &__decor-block {
+         position: absolute;
+         inset-inline-end: 9px;
+         inset-block-start: 20px;
+   
+         display: flex;
+         align-items: center;
+         // justify-content: end;
+         gap: 9px;
+   
+         text-transform: uppercase;
+         color: var(--text-color);
+         line-height: calc(25/18);
+         span{
+            display: inline-block;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            overflow: hidden;
+   
+            background-color: var(--text-color);
+   
+            box-shadow: 0px 0px 4px 2px var(--text-color);
+   
+         }
+      }
+   
+      &__content {
+         padding: clamp(13.125rem, -0.3053rem + 57.3028vw, 27.2rem) 0 11.4rem  0;
+         
+         
+            
+      }
+   
+      &__title {
+         // position: relative;
+         // inset-inline-start: -19.8px;
+         // font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+   
+         &:not(:last-child){
+            margin-bottom: clamp(3.4375rem, -2.9437rem + 27.2265vw, 8.3rem);;
+            
+         }
+      }
+      &__text{
+   
+         // margin-left: auto;
+         // max-width: clamp(22.75rem, -1.0625rem + 49.6094vw, 30.6875rem);
+         // font-weight: bold;
+         // color: var(--text-color);
+   
+         // background-color: var(--accent-color);
+      }
+      &__paragrapgh {
+         
+      }
+   }
+   
+}
+
+@media (width < 768px){
+
+   .introduction {
+   
+      &__container{
+         &::after {
+            width: 1px;
+            height: 25px;
+            inset-block-start: 10px;
+            inset-inline-end: -10px;
+        }
+
+         &::before {
+            width: 25px;
+            height: 1px;
+            inset-block-start: 10px;
+            inset-inline-end: -10px;
+         
+         }
+      }
+
+
+      &__title {
+         position: relative;
+         inset-inline-start: 0px;
+
+         line-height: 0.8;
+         letter-spacing: -2.8px;
+         
+         &:not(:last-child){
+             margin-bottom: 53px;
+            
+         }
+      }
+      
+      &__content {
+         padding: 240px 0 4.7rem 0;
+         
+         
+            
+      }
+
+      &__decor-block{
+         inset-inline-end: 6px;
+         inset-block-start: 10px;
+      }
+      
+   }
+
+   
+      
+  
+}
+//? introduction section END
+
+
+
+
+
+//?why is it so hard section
+
+.why-is-it-so-hard {
+   
+
+   &__container {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 32px;
+   }
+
+   &__section-title {
+     
+      
+   }
+
+   &__content {
+      flex: 1 1 63.4%;
+      display: flex;
+      flex-direction: column;
+      gap: 18.5px;
+   }
+
+   &__card {
+   }
+}
+
+
+@media (width <= 607px){
+   .why-is-it-so-hard {
+   
+
+      &__container {
+         display: flex;
+         flex-direction: column;
+         
+      }
+   
+      &__section-title {
+         flex: 1 1 30.8%;
+      }
+   
+      &__content {
+         flex: 1 1 63.4%;
+         display: flex;
+         flex-direction: column;
+         
+      }
+   
+      &__card {
+      }
+   }
+}
+//?why is it so hard section END
+
+
+
+
+//? what-reduces-attention section
+
+.what-reduces-attention {
+
+   &__container {
+   }
+
+   &__section-title {
+   }
+
+   &__card-body {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(314px, 1fr));
+      gap: 19.5px;
+      
+   }
+
+   &__card {
+   }
+}
+
+@media (width<= 768px) {
+   .what-reduces-attention {
+
+      &__container {
+      }
+   
+      &__section-title {
+      }
+   
+      &__card-body {
+         display: grid;
+         grid-template-columns: 100%;
+         
+         
+      }
+   
+      &__card {
+      }
+   }
+}
+
+@media (width < 768px) {
+
+   .what-reduces-attention{
+      &__card-body {
+     
+         gap: 18px;
+         
+      }
+   }
+   
+  
+}
+
+//? what-reduces-attention section END
+
+
+
+//? how to concentrate section
+.how-to-concentrate {
+   &__container{
+      display: flex;
+      column-gap: 1.25rem;
+   }
+   &__section-title {
+      max-inline-size: 32%;
+   }
+
+   &__content {
+      flex: 1 1 63.4%;
+      display: flex;
+      flex-direction: column;
+      
+      gap: 19.2px;
+      
+   }
+   &__title{
+      color: var(--text-color);
+      &:not(:last-child){
+         margin-bottom: 0px;
+      }
+   }
+   &__card {
+   }
+}
+
+@media (width  <= 768px) {
+   .how-to-concentrate{
+      &__container{
+         column-gap: 23px;
+      }
+      
+
+   }
+}
+
+@media (width <= 607px) {
+   .how-to-concentrate {
+      &__container{
+         
+         flex-direction: column;
+      }
+      &__section-title {
+         font-size: 18px;
+         max-inline-size: none;
+      }
+   
+      &__content {
+         flex: 1 1 63.4%;
+         display: flex;
+         flex-direction: column;
+         
+         gap: 19px;
+         
+      }
+      &__title{
+         
+         &:not(:last-child){
+            margin-bottom: 0px;
+         }
+      }
+      &__card {
+      }
+   }
+   
+}
+
+//? how to concentrate section END
+
+
+
+
+//? in pictures section
+
+#in-pictures-books{
+   grid-area: books;
+}
+#in-pictures-ice-cream{
+   grid-area: ice-cream;
+}
+#in-pictures-street{
+   margin-top: 5px;
+   grid-area: street;
+}
+@media (width <= 768px) {
+   #in-pictures-street{
+      margin-top: 0;
+   }
+}
+#in-pictures-sunset{
+   grid-area: sunset;
+}
+#in-pictures-tape{
+   grid-area: tape;
+}
+.in-pictures {
+
+   &__container {
+   }
+
+   &__title {
+   }
+
+   &__grid-body {
+   }
+}
+
+.grid-body-in-pictures {
+   display: grid;
+   grid-template-columns: repeat(3,  clamp(14.3125rem, -1.8125rem + 33.5938vw, 19.6875rem));
+   grid-template-rows: clamp(12rem, -0.75rem + 26.5625vw, 16.25rem) clamp(14.375rem, -1.5625rem + 33.2031vw, 19.6875rem) clamp(19.875rem, -0.75rem + 42.9688vw, 26.75rem); // адаптивные строки в грид контейнере с помощью клампа
+   grid-auto-rows: 315px;
+   gap: 20px;
+
+   grid-template-areas: 
+   "sunset sunset ice-cream"
+   "tape books ice-cream"
+   "tape street street";
+   &__item {
+   }
+}
+
+
+
+@media (width < 768px) {
+   .in-pictures {
+
+      &__container {
+      }
+   
+      &__title {
+         &:not(:last-child){margin-block-end: 0.625rem ;}
+      }
+   
+      &__grid-body {
+      }
+   }
+   .grid-body-in-pictures {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 142px;
+      grid-auto-rows: 355px 237px;
+      gap: 10px;
+   
+      grid-template-areas: 
+      "sunset  "
+      "ice-cream"
+      "tape "
+      "books"
+      "street";
+      &__item {
+      }
+   }
+}
+//? in pictures section end
+
+
+
+
+
+//? bye section
+
+.bye {
+   position: relative;
+   margin-bottom: 1.25rem;
+   
+   &__container {
+      &::before,&::after{
+      
+         content: '';
+         position: absolute;
+         
+   
+         background: var(--text-color);
+         transform: translate(-20px, 6px);
+      }
+   
+      &::before{
+         width: 25px;
+         height: 1px;
+         inset-block-start: 0;
+         inset-inline-end: 0;
+         
+      }
+      &::after{
+         width: 1px;
+         height: 25px;
+         inset-block-start: 0;
+         inset-inline-end: 0;
+         
+      }
+   }
+   &__box-for-decor{
+      &::before,&::after{
+      
+         content: '';
+         position: absolute;
+         
+   
+         background: var(--text-color);
+         transform: translate(20px, 0px);
+      }
+   
+      &::before{
+         width: 25px;
+         height: 1px;
+         inset-block-end:0 ;
+         inset-inline-start: 0;
+      }
+      &::after{
+         width: 1px;
+         height: 25px;
+         inset-block-end:0 ;
+         inset-inline-start: 0;
+      }
+   }
+   &__title {
+      text-align: center;
+      --h1-offset: 2px;
+      font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+      padding-top: 269px;
+      padding-bottom: 261px;
+   }
+}
+
+@media (width < 1024px) {
+   .bye {
+     margin-bottom: 0.625rem;
+      &__container {
+         &::before,&::after{
+            transform: translate(-20px, 0px);
+         }
+         
+      }
+   
+      &__title {
+         
+         
+         padding-top: 414px;
+         padding-bottom: 412px;
+     
+      }
+   }
+}
+@media (width < 768px) {
+   .bye {
+     margin-bottom: 0.625rem;
+     &__container {
+      &::before,&::after{
+         transform: translate(-10px, 1px);
+      }
+      
+   }
+
+   &__box-for-decor{
+      &::before,&::after{
+
+         transform: translate(10px, 0px);
+      }
+   
+   }
+
+
+   
+   
+      &__title {
+         letter-spacing: 2.30px;
+         --h1-offset: 2px;
+         font-size: 7.05rem;
+         padding-top: 253px;
+         padding-bottom: 250px;
+      }
+   }
+}
+//? bye section END
+

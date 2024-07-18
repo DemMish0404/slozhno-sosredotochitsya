@@ -1,0 +1,25 @@
+/*
+  Переменные для вашего проекта
+  и их переопределение под различные устройства
+*/
+
+
+:root {
+  --opacity-for-hover:1;
+
+
+  --h1-color: #FFC2E6; 
+  --h1-accent: #FF0070;
+  --h1-offset: 4px;
+
+  --main-color: #FFF1F7;
+  --accent-color: #FF8DCB;
+  --text-color: #353430;
+
+
+  --background-image-introduction: url('../images/cover-image-light.png') ;
+
+
+  --transition-effect: all 0.3s ease 0s;
+} 
+

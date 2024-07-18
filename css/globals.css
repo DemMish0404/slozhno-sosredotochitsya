@@ -3,6 +3,9 @@
 *,
 *::before,
 *::after {
+  padding: 0;
+	margin: 0;
+	border: 0;
   box-sizing: border-box;
 }
 
@@ -10,6 +13,11 @@ body {
   min-inline-size: 375px;
   max-inline-size: 1440px;
   margin: 0 auto;
+  font-size: 1.125rem;
+  font-family: 'IBM Plex mono',Arial, Helvetica, sans-serif ;
+  color: var(--text-color);
+  background-color: var(--main-color);
+  
 }
 
 h1,
@@ -19,6 +27,8 @@ h4,
 h5,
 h6,
 p {
+  font-weight: inherit;
+	font-size: inherit;
   margin: 0;
 }
 
@@ -32,6 +42,9 @@ picture {
   margin: 0;
   padding: 0;
 }
+img {
+	vertical-align: top;
+}
 
 button,
 a {
@@ -39,4 +52,7 @@ a {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  text-decoration: none;
+  
+  cursor: pointer;
 }
