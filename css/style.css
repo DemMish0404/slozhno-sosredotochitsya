@@ -517,9 +517,6 @@
 .bye__box-for-decor {
   position: relative;
 }
-.bye__box-for-decor::before, .bye__box-for-decor::after {
-  transform: translate(20px, 0px);
-}
 .bye__title {
   text-align: center;
   --for-main-titles-offset: 2px;

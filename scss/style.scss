@@ -985,9 +985,7 @@
    }
    &__box-for-decor{
       position: relative;
-      &::before,&::after{
-         transform: translate(20px, 0px);
-      }
+      
 
       // &::before,&::after{
       
