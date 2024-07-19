@@ -18,6 +18,42 @@
     padding: 0px 10px;
   }
 }
+.focus-decor-start::before, .focus-decor-start::after {
+  content: "";
+  position: absolute;
+  background: var(--text-color);
+}
+.focus-decor-start::before {
+  width: 25px;
+  height: 1px;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+}
+.focus-decor-start::after {
+  width: 1px;
+  height: 25px;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+}
+
+.focus-decor-end::before, .focus-decor-end::after {
+  content: "";
+  position: absolute;
+  background: var(--text-color);
+}
+.focus-decor-end::before {
+  width: 25px;
+  height: 1px;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+}
+.focus-decor-end::after {
+  width: 1px;
+  height: 25px;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+}
+
 .section-title {
   font-weight: bold;
   max-inline-size: 30.8%;
@@ -31,12 +67,12 @@
     max-inline-size: none;
   }
 }
-.title-second-version {
+.title-with-bg {
   font-weight: bold;
   background-color: var(--accent-color);
   color: var(--text-color);
 }
-.title-second-version:not(:last-child) {
+.title-with-bg:not(:last-child) {
   margin-bottom: 1.25rem;
 }
 
@@ -72,10 +108,10 @@
   outline: 1px solid var(--text-color);
 }
 
-.title-third-version {
+.fancy-title {
   font-weight: bold;
-  color: var(--h1-color);
-  text-shadow: var(--h1-offset) var(--h1-offset) var(--h1-accent);
+  color: var(--for-main-titles-color);
+  text-shadow: var(--for-main-titles-offset) var(--for-main-titles-offset) var(--for-main-titles-accent);
 }
 
 .regular-weight {
@@ -182,42 +218,13 @@
   position: relative;
 }
 .introduction__container::before, .introduction__container::after {
-  content: "";
-  position: absolute;
-  background: var(--text-color);
-  transform: translate(-20px, 0px);
-}
-.introduction__container::before {
-  width: 25px;
-  height: 1px;
-  inset-block-start: 20px;
-  inset-inline-end: 0;
-}
-.introduction__container::after {
-  width: 1px;
-  height: 25px;
-  inset-block-start: 20px;
-  inset-inline-end: 0;
+  transform: translate(-20px, 20px);
 }
 .introduction__box-for-decor {
   position: relative;
 }
 .introduction__box-for-decor::before, .introduction__box-for-decor::after {
-  content: "";
-  position: absolute;
-  background: var(--text-color);
-}
-.introduction__box-for-decor::before {
-  width: 25px;
-  height: 1px;
-  inset-block-end: 20px;
-  inset-inline-start: 0px;
-}
-.introduction__box-for-decor::after {
-  width: 1px;
-  height: 25px;
-  inset-block-end: 20px;
-  inset-inline-start: 0px;
+  transform: translate(0px, -20px);
 }
 .introduction__decor-block {
   position: absolute;
@@ -230,7 +237,8 @@
   color: var(--text-color);
   line-height: 1.3888888889;
 }
-.introduction__decor-block span {
+.introduction__decor-block::after {
+  content: "";
   display: inline-block;
   width: 9px;
   height: 9px;
@@ -500,45 +508,21 @@
   position: relative;
   margin-bottom: 1.25rem;
 }
+.bye__container {
+  position: relative;
+}
 .bye__container::before, .bye__container::after {
-  content: "";
-  position: absolute;
-  background: var(--text-color);
   transform: translate(-20px, 6px);
 }
-.bye__container::before {
-  width: 25px;
-  height: 1px;
-  inset-block-start: 0;
-  inset-inline-end: 0;
-}
-.bye__container::after {
-  width: 1px;
-  height: 25px;
-  inset-block-start: 0;
-  inset-inline-end: 0;
+.bye__box-for-decor {
+  position: relative;
 }
 .bye__box-for-decor::before, .bye__box-for-decor::after {
-  content: "";
-  position: absolute;
-  background: var(--text-color);
   transform: translate(20px, 0px);
-}
-.bye__box-for-decor::before {
-  width: 25px;
-  height: 1px;
-  inset-block-end: 0;
-  inset-inline-start: 0;
-}
-.bye__box-for-decor::after {
-  width: 1px;
-  height: 25px;
-  inset-block-end: 0;
-  inset-inline-start: 0;
 }
 .bye__title {
   text-align: center;
-  --h1-offset: 2px;
+  --for-main-titles-offset: 2px;
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   padding-top: 269px;
   padding-bottom: 261px;
@@ -568,7 +552,7 @@
   }
   .bye__title {
     letter-spacing: 2.3px;
-    --h1-offset: 2px;
+    --for-main-titles-offset: 2px;
     font-size: 7.05rem;
     padding-top: 253px;
     padding-bottom: 250px;

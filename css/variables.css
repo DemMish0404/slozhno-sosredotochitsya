@@ -5,12 +5,15 @@
 
 
 :root {
+  
+
+
   --opacity-for-hover:1;
 
 
-  --h1-color: #FFC2E6; 
-  --h1-accent: #FF0070;
-  --h1-offset: 4px;
+  --for-main-titles-color: #FFC2E6; 
+  --for-main-titles-accent: #FF0070;
+  --for-main-titles-offset: 4px;
 
   --main-color: #FFF1F7;
   --accent-color: #FF8DCB;
