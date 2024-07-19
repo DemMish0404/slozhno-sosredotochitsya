@@ -302,18 +302,6 @@
     position: absolute;
     background: var(--text-color);
   }
-  .introduction__box-for-decor::before {
-    width: 25px;
-    height: 1px;
-    inset-block-end: 20px;
-    inset-inline-start: 0px;
-  }
-  .introduction__box-for-decor::after {
-    width: 1px;
-    height: 25px;
-    inset-block-end: 20px;
-    inset-inline-start: 0px;
-  }
   .introduction__decor-block {
     position: absolute;
     inset-inline-end: 9px;
@@ -543,9 +531,6 @@
   }
   .bye__container::before, .bye__container::after {
     transform: translate(-10px, 1px);
-  }
-  .bye__box-for-decor::before, .bye__box-for-decor::after {
-    transform: translate(10px, 0px);
   }
   .bye__title {
     letter-spacing: 2.3px;

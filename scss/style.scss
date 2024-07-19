@@ -536,16 +536,10 @@
          }
       
          &::before{
-            width: 25px;
-            height: 1px;
-            inset-block-end:20px ;
-            inset-inline-start: 0px;
+           
          }
          &::after{
-            width: 1px;
-            height: 25px;
-            inset-block-end:20px ;
-            inset-inline-start: 0px;
+           
          }
       }
       &__decor-block {
@@ -1051,7 +1045,7 @@
    &__box-for-decor{
       &::before,&::after{
 
-         transform: translate(10px, 0px);
+         // transform: translate(10px, 0px);
       }
    
    }
